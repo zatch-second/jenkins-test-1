@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Test'){
             steps{
-                sh 'docker compose -f deploy/docker-compose.yml exec -T webapp wget -q0- http://127.0.0.0:5000/health'
+                sh 'docker compose -f deploy/docker-compose.yml exec -T webapp wget -qO- http://127.0.0.1:5000/health'
             }
         }
     }
