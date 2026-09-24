@@ -1,0 +1,9 @@
+services:
+  webapp:
+    build:
+      context: ../src
+      dockerfile: ../config/Dockerfile.web
+    ports:
+      - "5000:5000"
+    environment:
+      - APP_ENV=production
